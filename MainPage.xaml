@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="TestMauiApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+		<!-- testwave.wav tmnt4.mp3 testvid.mp4 -->
+			<Label         
+			Text="This is the MediaElement version of the php script serving the mp3"
+			Style="{StaticResource SubHeadline}"
+			SemanticProperties.HeadingLevel="Level2"
+			SemanticProperties.Description="Media Element 1 " />
+			
+			<toolkit:MediaElement x:Name="mediaElement1"
+			HeightRequest="300"
+			WidthRequest="300"
+			ShouldAutoPlay="False"
+			Source="https://victorsvacantland.com/mediaplayer/audioclipplayer.php?path=/home3/victovf0/chat_media/2024/01/01/testwave.wav"	 
+			ShouldShowPlaybackControls="True" />
+			
+			<Label         
+				Text="This is the webview version of the php script serving the mp3"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Web view " />
+
+			<WebView Source="https://victorsvacantland.com/mediaplayer/audioclipplayer.php?path=/home3/victovf0/chat_media/2024/01/01/testwave.wav"
+                HeightRequest = "300"
+				WidthRequest = "300" />
+
+			<!--  tmnt4-2.mp3 testvid2.mp4 -->
+			<Label         
+			Text="This is the MediaElement version of an easily accessible mp3"
+			Style="{StaticResource SubHeadline}"
+			SemanticProperties.HeadingLevel="Level2"
+			SemanticProperties.Description="Media Element 1 " />
+
+			<toolkit:MediaElement x:Name="mediaElement2"
+			HeightRequest="300"
+			WidthRequest="300"
+			ShouldAutoPlay="False"
+			Source="https://victorsvacantland.com/media/testvid2.mp4"	 
+			ShouldShowPlaybackControls="True" />
+
+						<Label         
+				Text="This is the webview version of of an easily accessible mp3"
+				Style="{StaticResource SubHeadline}"
+				SemanticProperties.HeadingLevel="Level2"
+				SemanticProperties.Description="Web view " />
+
+			<WebView Source="https://victorsvacantland.com/media/testvid2.mp4"
+				 HeightRequest = "300"
+				WidthRequest = "300"/>
+		</VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
